@@ -1,22 +1,19 @@
-import { useEffect, useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-import Cities from "./cities.js";
+import { useState, useEffect } from "react";
 import "./App.css";
+import CitieInput from "./Components/CitieInput/CitieInput.jsx";
+import CitieCards from "./Components/CitieCards/CitieCards.jsx";
 
 function App() {
-  const [count, setCount] = useState(0);
-
-  console.log("Cities");
-  console.log(Cities);
+  const [choicedCities, setChoicedCities] = useState([]);
 
   useEffect(() => {
-    setCount(Cities);
-  }, [setCount]);
+    console.log(choicedCities);
+  }, [choicedCities]);
 
   return (
     <div>
-      <h1>Simple Wheater App</h1>
+      <CitieInput setChoicedCities={setChoicedCities} />
+      <CitieCards choicedCities={choicedCities} />
     </div>
   );
 }

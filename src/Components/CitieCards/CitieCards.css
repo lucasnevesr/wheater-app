@@ -1,0 +1,38 @@
+.container {
+   
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+
+  .cities {
+    display: grid;
+    grid-gap: 32px 20px;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 0px;
+}
+
+
+.citie {
+    list-style-type: none;
+    border-radius: 20px;
+    
+
+}
+
+.citie-name {
+    font-size: 1.5em;
+    margin: 0px;
+}
+
+sup {
+    font-size: 0.5em;
+    padding: 3%;
+}
+
+.citie-temp {
+    
+    font-size: 5rem;
+    font-weight: bold;
+    
+
+}
