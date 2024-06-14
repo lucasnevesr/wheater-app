@@ -2,7 +2,7 @@ import { useState } from "react";
 import AllCities from "../../cities";
 import "./CitieInput.css";
 
-function CitieInput({ setChoicedCities }) {
+function CitieInput({ setChoicedCities, onUpdate }) {
   const [citieInput, setCitieInput] = useState("");
 
   function handleChange(event) {
@@ -25,6 +25,7 @@ function CitieInput({ setChoicedCities }) {
       alert("Please search for a valid Citie.");
     }
 
+    onUpdate();
     setCitieInput("");
     event.preventDefault();
   }
